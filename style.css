@@ -63,7 +63,7 @@ body, html {
     width: 100%;
     aspect-ratio: 3 / 4;
     background-color: #eee;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .image-container img {
