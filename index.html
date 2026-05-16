@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Souvenirs - Portfolio Transmédia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="side-nav">
+    <button onclick="goToLocation(800, 500)">🇺🇸 USA</button>
+    <button onclick="goToLocation(2800, 1500)">🇵🇹 Portugal</button>
+    <button onclick="goToLocation(4000, 200)">🇬🇧 Londres</button>
+    <button onclick="goToLocation(5800, 300)">🇪🇸 Ibiza</button>
+    <button onclick="goToLocation(5800, 2000)">🇲🇦 Maroc</button>
+</nav>
+
+<div id="viewport">
+    <div id="canvas">
+        
+        <div class="postcard maroc" onclick="toggleZoneCard(this, 'maroc-layer1', 'maroc')">
+            <div class="camera-info">Shot on Iphone 16</div>
+            <div class="image-container">
+                <img src="Pic/ruine.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/ruine.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Imouzzer-Morocco, 2026</div>
+        </div>
+
+        <div class="postcard tamri" onclick="toggleZoneCard(this, 'maroc-layer2', 'maroc')">
+            <div class="camera-info">Shot on Iphone 16</div>
+            <div class="image-container">
+                <img src="Pic/dromadaires.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/dromadaires.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Tamri-Morocco, 2026</div>
+        </div>
+
+        <div class="postcard aqesri" onclick="toggleZoneCard(this, 'maroc-layer3', 'maroc')">
+            <div class="camera-info">Shot on Iphone 16</div>
+            <div class="image-container">
+                <img src="Pic/cascade.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/cascade.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Aqesri-Morocco, 2026</div>
+        </div>
+
+        <div class="postcard tente" onclick="toggleZoneCard(this, 'maroc-layer4', 'maroc')">
+            <div class="camera-info">Shot on Iphone 16</div>
+            <div class="image-container">
+                <img src="Pic/tente.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/tente.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Aqesri-Morocco, 2026</div>
+        </div>
+
+        <div class="postcard usa" onclick="toggleZoneCard(this, 'usa-layer1', 'usa')">
+            <div class="camera-info">Shot on Iphone 15</div>
+            <div class="image-container">
+                <img src="Pic/maison_blanche.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/maison_blanche.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">The White House, 2024</div>
+        </div>
+
+        <div class="postcard liberte" onclick="toggleZoneCard(this, 'usa-layer2', 'usa')">
+            <div class="camera-info">Shot on Iphone 15</div>
+            <div class="image-container">
+                <img src="Pic/liberte.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/liberte.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Statue of Liberty, 2024</div>
+        </div>
+
+        <div class="postcard empire" onclick="toggleZoneCard(this, 'usa-layer3', 'usa')">
+            <div class="camera-info">Shot on Iphone 15</div>
+            <div class="image-container">
+                <img src="Pic/empire_state_building.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/empire_state_building.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Empire State Building, 2024</div>
+        </div>
+
+        <div class="postcard ibiza" onclick="toggleZoneCard(this, 'ibiza-layer1', 'ibiza')">
+            <div class="camera-info">Shot on iPhone 15</div>
+            <div class="image-container">
+                <img src="Pic/ibiza.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/ibiza.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Ibiza, 2024</div>
+        </div>
+
+        <div class="postcard sant-agusti" onclick="toggleZoneCard(this, 'ibiza-layer2', 'ibiza')">
+            <div class="camera-info">Shot on iPhone 15</div>
+            <div class="image-container">
+                <img src="Pic/Sant_Augustí_des_Vedra.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/Sant_Augustí_des_Vedra.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Sant Agustí, 2024</div>
+        </div>
+
+        <div class="postcard bigben" onclick="toggleZoneCard(this, 'london-layer1', 'london')">
+            <div class="camera-info">Shot on Samsung Galaxy A14</div>
+            <div class="image-container">
+                <img src="Pic/BigBen.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/BigBen.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Big Ben - London, 2023</div>
+        </div>
+
+        <div class="postcard towerbridge" onclick="toggleZoneCard(this, 'london-layer2', 'london')">
+            <div class="camera-info">Shot Samsung Galaxy A14</div>
+            <div class="image-container">
+                <img src="Pic/TowerBridge.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/TowerBridge.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Tower Bridge, 2023</div>
+        </div>
+
+        <div class="postcard portugal" onclick="toggleZoneCard(this, 'portugal-layer1', 'portugal')">
+            <div class="camera-info">Shot on Samsung Galaxy A12</div>
+            <div class="image-container">
+                <img src="Pic/portugal.jpg" class="real-photo" alt="Photo">
+                <img src="Pic/portugal.png" class="drawing" alt="Dessin">
+            </div>
+            <div class="caption">Lisbon, 2022</div>
+        </div>
+
+        <div class="center-marker">+</div>
+    </div>
+</div>
+
+
+
+
+<audio id="maroc-layer1" src="Audio/maroc_1.mp3" loop></audio>
+<audio id="maroc-layer2" src="Audio/maroc_2.mp3" loop></audio>
+<audio id="maroc-layer3" src="Audio/maroc_3.mp3" loop></audio>
+<audio id="maroc-layer4" src="Audio/maroc_4.mp3" loop></audio>
+<audio id="usa-layer1" src="Audio/usa_1.mp3" loop></audio>
+<audio id="usa-layer2" src="Audio/usa_2.mp3" loop></audio>
+<audio id="usa-layer3" src="Audio/usa_3.mp3" loop></audio>
+<audio id="ibiza-layer1" src="Audio/ibiza_1.mp3" loop></audio>
+<audio id="ibiza-layer2" src="Audio/ibiza_2.mp3" loop></audio>
+<audio id="london-layer1" src="Audio/london_1.mp3" loop></audio>
+<audio id="london-layer2" src="Audio/london_2.mp3" loop></audio>
+<audio id="portugal-layer1" src="Audio/portugal_1.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
