@@ -44,7 +44,31 @@ body, html {
     z-index: 100;
 }
 
-/* --- INFO APPAREIL PHOTO (Corrigé) --- */
+/* --- ÉTOILE DE FAVORIS --- */
+.fav-star {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.fav-star:hover {
+    transform: scale(1.2);
+    color: #ffca28;
+}
+
+/* Changement de couleur de l'étoile quand la classe active est ajoutée */
+.postcard.is-favorite .fav-star {
+    color: #ffb300;
+    text-shadow: 0 0 4px rgba(255, 179, 0, 0.4);
+}
+
+/* --- INFO APPAREIL PHOTO --- */
 .camera-info {
     font-family: Arial, sans-serif;
     font-size: 0.65rem;
@@ -57,13 +81,13 @@ body, html {
     transition: opacity 0.6s ease-in-out;
 }
 
-/* --- CONTENEUR D'IMAGES (Corrigé superposition) --- */
+/* --- CONTENEUR D'IMAGES --- */
 .image-container {
     position: relative;
     width: 100%;
     aspect-ratio: 3 / 4;
     background-color: #eee;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .image-container img {
@@ -74,7 +98,7 @@ body, html {
 }
 
 .drawing {
-    position: absolute; /* Superposition exacte */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
@@ -82,7 +106,7 @@ body, html {
 }
 
 .real-photo {
-    position: absolute; /* Superposition exacte */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
@@ -103,7 +127,7 @@ body, html {
 .postcard.is-revealed .caption, 
 .postcard.is-revealed .camera-info { opacity: 1; transform: translateY(0); }
 
-/* --- POSITIONS GPS ESPACÉES --- */
+/* --- POSITIONS GPS --- */
 .usa { top: 500px; left: 800px; transform: rotate(2deg); }
 .liberte { top: 900px; left: 1400px; transform: rotate(-4deg); }
 .empire { top: 300px; left: 1800px; transform: rotate(3deg); }
@@ -121,7 +145,7 @@ body, html {
 .aqesri { top: 1800px; left: 6500px; transform: rotate(-2deg); } 
 .tente { top: 1600px; left: 6900px; transform: rotate(3deg); }
 
-/* --- MENU --- */
+/* --- NAVIGATION LATÉRALE --- */
 .side-nav {
     position: fixed;
     left: 20px;
@@ -143,6 +167,58 @@ body, html {
     font-family: 'Caveat', cursive;
     font-size: 1.2rem;
     transition: all 0.3s ease;
+    text-align: left;
 }
 
 .side-nav button:hover { background: white; transform: translateX(10px); }
+
+/* --- PANNEAU EN BAS DES BOUTONS --- */
+.favorites-panel {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    width: 160px;
+    color: #333;
+}
+
+.favorites-panel h3 {
+    margin: 0 0 8px 0;
+    font-size: 0.85rem;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+.favorites-panel .empty-msg {
+    margin: 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* Boutons générés pour la redirection vers les favoris */
+.fav-item {
+    display: block;
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    border-radius: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+}
+
+.fav-item:hover {
+    background: #ffb300;
+    color: white;
+    transform: translateX(5px);
+}

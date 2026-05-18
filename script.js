@@ -77,9 +77,53 @@ function fadeAudio(audio, targetVolume) {
     }, 50);
 }
 
+// --- AJOUT DE LA LOGIQUE DES FAVORIS ---
+
+function toggleFavorite(e, starElement) {
+    // Bloque la propagation de l'événement pour ne pas activer le zoom et la musique de la carte
+    e.stopPropagation(); 
+    
+    const card = starElement.closest('.postcard');
+    card.classList.toggle('is-favorite');
+    
+    updateFavoritesUI();
+}
+
+function updateFavoritesUI() {
+    const favListContainer = document.getElementById('favorites-list');
+    
+    // Réinitialisation du conteneur de la liste
+    favListContainer.innerHTML = '⭐ Mes Favoris';
+    
+    // Sélection de toutes les cartes marquées en favoris
+    const favoriteCards = document.querySelectorAll('.postcard.is-favorite');
+    
+    if (favoriteCards.length === 0) {
+        favListContainer.innerHTML += '<p class="empty-msg">Aucun favori</p>';
+        return;
+    }
+    
+    // Génération dynamique des raccourcis
+    favoriteCards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        const x = card.getAttribute('data-x');
+        const y = card.getAttribute('data-y');
+        
+        const btn = document.createElement('button');
+        btn.className = 'fav-item';
+        btn.innerText = `📍 ${name}`;
+        
+        btn.onclick = () => { 
+            goToLocation(parseInt(x), parseInt(y)); 
+        };
+        
+        favListContainer.appendChild(btn);
+    });
+}
+
 window.onload = () => {
     document.querySelectorAll('audio').forEach(a => a.volume = 0);
-    targetX = currentX = -6000 + (window.innerWidth / 2); // Start at Morocco
+    targetX = currentX = -6000 + (window.innerWidth / 2); // Départ position Maroc
     targetY = currentY = -2000 + (window.innerHeight / 2);
     animate();
 };
