@@ -14,9 +14,9 @@
 <nav class="side-nav">
     <button onclick="goToLocation(800, 500)">🇺🇸 USA</button>
     <button onclick="goToLocation(2800, 1500)">🇵🇹 Portugal</button>
-    <button onclick="goToLocation(4000, 200)">🇬🇧 Londres</button>
+    <button onclick="goToLocation(4000, 200)">🇬🇧 London</button>
     <button onclick="goToLocation(5800, 300)">🇪🇸 Ibiza</button>
-    <button onclick="goToLocation(5800, 2000)">🇲🇦 Maroc</button>
+    <button onclick="goToLocation(5800, 2000)">🇲🇦 Morocco</button>
     
     <div class="favorites-panel" id="favorites-list">
         <h3>⭐ Mes Favoris</h3>
@@ -27,77 +27,77 @@
 <div id="viewport">
     <div id="canvas">
         
-        <div class="postcard maroc" data-name="Imouzzer (Maroc)" data-x="5000" data-y="2000" onclick="toggleZoneCard(this, 'maroc-layer1', 'maroc')">
+        <div class="postcard maroc" data-name="Imouzzer" data-x="5000" data-y="2000" onclick="toggleZoneCard(this, 'maroc-layer1', 'maroc')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 16</div>
             <div class="image-container">
                 <img src="Pic/ruine.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/ruine.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Imouzzer-Morocco, 2026</div>
+            <div class="caption">Imouzzer - Morocco, 2026</div>
         </div>
 
-        <div class="postcard tamri" data-name="Tamri (Maroc)" data-x="5800" data-y="2500" onclick="toggleZoneCard(this, 'maroc-layer2', 'maroc')">
+        <div class="postcard tamri" data-name="Tamri" data-x="5800" data-y="2500" onclick="toggleZoneCard(this, 'maroc-layer2', 'maroc')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 16</div>
             <div class="image-container">
                 <img src="Pic/dromadaires.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/dromadaires.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Tamri-Morocco, 2026</div>
+            <div class="caption">Tamri - Morocco, 2026</div>
         </div>
 
-        <div class="postcard aqesri" data-name="Aqesri (Maroc)" data-x="6500" data-y="1800" onclick="toggleZoneCard(this, 'maroc-layer3', 'maroc')">
+        <div class="postcard aqesri" data-name="Paradise Valley" data-x="6500" data-y="1800" onclick="toggleZoneCard(this, 'maroc-layer3', 'maroc')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 16</div>
             <div class="image-container">
                 <img src="Pic/cascade.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/cascade.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Aqesri-Morocco, 2026</div>
+            <div class="caption">Paradise Valley - Morocco, 2026</div>
         </div>
 
-        <div class="postcard tente" data-name="Tente (Maroc)" data-x="6900" data-y="1600" onclick="toggleZoneCard(this, 'maroc-layer4', 'maroc')">
+        <div class="postcard tente" data-name="Aqesri" data-x="6900" data-y="1600" onclick="toggleZoneCard(this, 'maroc-layer4', 'maroc')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 16</div>
             <div class="image-container">
                 <img src="Pic/tente.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/tente.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Aqesri-Morocco, 2026</div>
+            <div class="caption">Aqesri - Morocco, 2026</div>
         </div>
 
-        <div class="postcard usa" data-name="Maison Blanche (USA)" data-x="800" data-y="500" onclick="toggleZoneCard(this, 'usa-layer1', 'usa')">
+        <div class="postcard usa" data-name="The White House)" data-x="800" data-y="500" onclick="toggleZoneCard(this, 'usa-layer1', 'usa')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 15</div>
             <div class="image-container">
                 <img src="Pic/maison_blanche.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/maison_blanche.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">The White House, 2024</div>
+            <div class="caption">The White House - USA, 2024</div>
         </div>
 
-        <div class="postcard liberte" data-name="Liberté (USA)" data-x="1400" data-y="900" onclick="toggleZoneCard(this, 'usa-layer2', 'usa')">
+        <div class="postcard liberte" data-name="Statue of Liberty" data-x="1400" data-y="900" onclick="toggleZoneCard(this, 'usa-layer2', 'usa')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 15</div>
             <div class="image-container">
                 <img src="Pic/liberte.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/liberte.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Statue of Liberty, 2024</div>
+            <div class="caption">Statue of Liberty - USA, 2024</div>
         </div>
 
-        <div class="postcard empire" data-name="Empire State (USA)" data-x="1800" data-y="300" onclick="toggleZoneCard(this, 'usa-layer3', 'usa')">
+        <div class="postcard empire" data-name="Empire State Building" data-x="1800" data-y="300" onclick="toggleZoneCard(this, 'usa-layer3', 'usa')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Iphone 15</div>
             <div class="image-container">
                 <img src="Pic/empire_state_building.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/empire_state_building.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Empire State Building, 2024</div>
+            <div class="caption">Empire State Building - USA, 2024</div>
         </div>
 
-        <div class="postcard ibiza" data-name="Plage (Ibiza)" data-x="5800" data-y="300" onclick="toggleZoneCard(this, 'ibiza-layer1', 'ibiza')">
+        <div class="postcard ibiza" data-name="Ibiza" data-x="5800" data-y="300" onclick="toggleZoneCard(this, 'ibiza-layer1', 'ibiza')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on iPhone 15</div>
             <div class="image-container">
@@ -107,17 +107,17 @@
             <div class="caption">Ibiza, 2024</div>
         </div>
 
-        <div class="postcard sant-agusti" data-name="Sant Agustí (Ibiza)" data-x="6400" data-y="500" onclick="toggleZoneCard(this, 'ibiza-layer2', 'ibiza')">
+        <div class="postcard sant-agusti" data-name="Sant Agustí" data-x="6400" data-y="500" onclick="toggleZoneCard(this, 'ibiza-layer2', 'ibiza')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on iPhone 15</div>
             <div class="image-container">
                 <img src="Pic/Sant_Augustí_des_Vedra.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/Sant_Augustí_des_Vedra.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Sant Agustí, 2024</div>
+            <div class="caption">Sant Agustí - Ibiza, 2024</div>
         </div>
 
-        <div class="postcard bigben" data-name="Big Ben (Londres)" data-x="4200" data-y="100" onclick="toggleZoneCard(this, 'london-layer1', 'london')">
+        <div class="postcard bigben" data-name="Big Ben" data-x="4200" data-y="100" onclick="toggleZoneCard(this, 'london-layer1', 'london')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Samsung Galaxy A14</div>
             <div class="image-container">
@@ -127,24 +127,24 @@
             <div class="caption">Big Ben - London, 2023</div>
         </div>
 
-        <div class="postcard towerbridge" data-name="Tower Bridge (Londres)" data-x="3700" data-y="400" onclick="toggleZoneCard(this, 'london-layer2', 'london')">
+        <div class="postcard towerbridge" data-name="Tower Bridge" data-x="3700" data-y="400" onclick="toggleZoneCard(this, 'london-layer2', 'london')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot Samsung Galaxy A14</div>
             <div class="image-container">
                 <img src="Pic/TowerBridge.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/TowerBridge.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Tower Bridge, 2023</div>
+            <div class="caption">Tower Bridge - London, 2023</div>
         </div>
 
-        <div class="postcard portugal" data-name="Lisbonne (Portugal)" data-x="2800" data-y="1500" onclick="toggleZoneCard(this, 'portugal-layer1', 'portugal')">
+        <div class="postcard portugal" data-name="Lisbon" data-x="2800" data-y="1500" onclick="toggleZoneCard(this, 'portugal-layer1', 'portugal')">
             <div class="fav-star" onclick="toggleFavorite(event, this)">★</div>
             <div class="camera-info">Shot on Samsung Galaxy A12</div>
             <div class="image-container">
                 <img src="Pic/portugal.jpg" class="real-photo" alt="Photo">
                 <img src="Pic/portugal.png" class="drawing" alt="Dessin">
             </div>
-            <div class="caption">Lisbon, 2022</div>
+            <div class="caption">Lisbon - Portugal, 2022</div>
         </div>
 
         <div class="center-marker">+</div>
