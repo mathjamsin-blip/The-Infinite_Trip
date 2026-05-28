@@ -1,4 +1,4 @@
-/* --- CONFIGURATION GÉNÉRALE --- */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ body, html {
     background-size: 100px 100px;
 }
 
-/* --- STYLE DES CARTES POSTALES --- */
+/* --- Styles des cartes --- */
 .postcard {
     position: absolute;
     width: 450px;
@@ -44,7 +44,7 @@ body, html {
     z-index: 100;
 }
 
-/* --- ÉTOILE DE FAVORIS --- */
+/* --- Etoiles favoris --- */
 .fav-star {
     position: absolute;
     top: 25px;
@@ -62,13 +62,13 @@ body, html {
     color: #ffca28;
 }
 
-/* Changement de couleur de l'étoile quand la classe active est ajoutée */
+
 .postcard.is-favorite .fav-star {
     color: #ffb300;
     text-shadow: 0 0 4px rgba(255, 179, 0, 0.4);
 }
 
-/* --- INFO APPAREIL PHOTO --- */
+
 .camera-info {
     font-family: Arial, sans-serif;
     font-size: 0.65rem;
@@ -81,7 +81,7 @@ body, html {
     transition: opacity 0.6s ease-in-out;
 }
 
-/* --- CONTENEUR D'IMAGES --- */
+
 .image-container {
     position: relative;
     width: 100%;
@@ -122,12 +122,11 @@ body, html {
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-out;
 }
 
-/* --- ÉTAT RÉVÉLÉ --- */
+
 .postcard.is-revealed .drawing { opacity: 0; }
 .postcard.is-revealed .caption, 
 .postcard.is-revealed .camera-info { opacity: 1; transform: translateY(0); }
 
-/* --- POSITIONS GPS --- */
 .usa { top: 500px; left: 800px; transform: rotate(2deg); }
 .liberte { top: 900px; left: 1400px; transform: rotate(-4deg); }
 .empire { top: 300px; left: 1800px; transform: rotate(3deg); }
@@ -145,7 +144,7 @@ body, html {
 .aqesri { top: 1800px; left: 6500px; transform: rotate(-2deg); } 
 .tente { top: 1600px; left: 6900px; transform: rotate(3deg); }
 
-/* --- NAVIGATION LATÉRALE --- */
+
 .side-nav {
     position: fixed;
     left: 20px;
@@ -172,7 +171,7 @@ body, html {
 
 .side-nav button:hover { background: white; transform: translateX(10px); }
 
-/* --- PANNEAU EN BAS DES BOUTONS --- */
+
 .favorites-panel {
     margin-top: 15px;
     padding: 12px;
@@ -200,7 +199,7 @@ body, html {
     color: #666;
 }
 
-/* Boutons générés pour la redirection vers les favoris */
+
 .fav-item {
     display: block;
     width: 100%;

@@ -77,7 +77,7 @@ function fadeAudio(audio, targetVolume) {
     }, 50);
 }
 
-// --- AJOUT DE LA LOGIQUE DES FAVORIS ---
+// --- Favoris ---
 
 function toggleFavorite(e, starElement) {
     // Bloque la propagation de l'événement pour ne pas activer le zoom et la musique de la carte
@@ -92,10 +92,10 @@ function toggleFavorite(e, starElement) {
 function updateFavoritesUI() {
     const favListContainer = document.getElementById('favorites-list');
     
-    // Réinitialisation du conteneur de la liste
+
     favListContainer.innerHTML = '⭐ Mes Favoris';
     
-    // Sélection de toutes les cartes marquées en favoris
+
     const favoriteCards = document.querySelectorAll('.postcard.is-favorite');
     
     if (favoriteCards.length === 0) {
@@ -103,7 +103,7 @@ function updateFavoritesUI() {
         return;
     }
     
-    // Génération dynamique des raccourcis
+
     favoriteCards.forEach(card => {
         const name = card.getAttribute('data-name');
         const x = card.getAttribute('data-x');
