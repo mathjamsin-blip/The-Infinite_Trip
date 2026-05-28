@@ -1,4 +1,4 @@
-
+/* --- Styles Généraux --- */
 body, html {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ body, html {
     background-size: 100px 100px;
 }
 
-/* --- Styles des cartes --- */
+/* --- Styles des Cartes Postales --- */
 .postcard {
     position: absolute;
     width: 450px;
@@ -44,7 +44,7 @@ body, html {
     z-index: 100;
 }
 
-/* --- Etoiles favoris --- */
+/* --- Étoiles Favoris --- */
 .fav-star {
     position: absolute;
     top: 25px;
@@ -62,13 +62,12 @@ body, html {
     color: #ffca28;
 }
 
-
 .postcard.is-favorite .fav-star {
     color: #ffb300;
     text-shadow: 0 0 4px rgba(255, 179, 0, 0.4);
 }
 
-
+/* --- Contenu des Cartes --- */
 .camera-info {
     font-family: Arial, sans-serif;
     font-size: 0.65rem;
@@ -80,7 +79,6 @@ body, html {
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
 }
-
 
 .image-container {
     position: relative;
@@ -122,11 +120,18 @@ body, html {
     transition: opacity 0.6s ease-in-out, transform 0.6s ease-out;
 }
 
+/* --- États d'Animation des Cartes --- */
+.postcard.is-revealed .drawing { 
+    opacity: 0; 
+}
 
-.postcard.is-revealed .drawing { opacity: 0; }
 .postcard.is-revealed .caption, 
-.postcard.is-revealed .camera-info { opacity: 1; transform: translateY(0); }
+.postcard.is-revealed .camera-info { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
 
+/* --- Positionnement Initial des Cartes --- */
 .usa { top: 500px; left: 800px; transform: rotate(2deg); }
 .liberte { top: 900px; left: 1400px; transform: rotate(-4deg); }
 .empire { top: 300px; left: 1800px; transform: rotate(3deg); }
@@ -144,7 +149,14 @@ body, html {
 .aqesri { top: 1800px; left: 6500px; transform: rotate(-2deg); } 
 .tente { top: 1600px; left: 6900px; transform: rotate(3deg); }
 
+.center-marker {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(0,0,0,0.1);
+    pointer-events: none;
+}
 
+/* --- Barre de Navigation de Gauche (Menu) --- */
 .side-nav {
     position: fixed;
     left: 20px;
@@ -169,9 +181,21 @@ body, html {
     text-align: left;
 }
 
-.side-nav button:hover { background: white; transform: translateX(10px); }
+.side-nav button:hover { 
+    background: white; 
+    transform: translateX(10px); 
+}
 
+/* --- Style du Logo Personnalisé --- */
+.nav-logo {
+    width: 60px;
+    height: auto;
+    align-self: center;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));
+}
 
+/* --- Panneau des Favoris --- */
 .favorites-panel {
     margin-top: 15px;
     padding: 12px;
@@ -199,7 +223,6 @@ body, html {
     color: #666;
 }
 
-
 .fav-item {
     display: block;
     width: 100%;
@@ -220,4 +243,25 @@ body, html {
     background: #ffb300;
     color: white;
     transform: translateX(5px);
+}
+
+/* --- Crédits / Signature de bas de page (Style "Shot on") --- */
+.credits {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    pointer-events: none;
 }

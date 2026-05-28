@@ -80,7 +80,6 @@ function fadeAudio(audio, targetVolume) {
 // --- Favoris ---
 
 function toggleFavorite(e, starElement) {
-    // Bloque la propagation de l'événement pour ne pas activer le zoom et la musique de la carte
     e.stopPropagation(); 
     
     const card = starElement.closest('.postcard');
@@ -92,10 +91,8 @@ function toggleFavorite(e, starElement) {
 function updateFavoritesUI() {
     const favListContainer = document.getElementById('favorites-list');
     
-
     favListContainer.innerHTML = '⭐ Mes Favoris';
     
-
     const favoriteCards = document.querySelectorAll('.postcard.is-favorite');
     
     if (favoriteCards.length === 0) {
@@ -103,7 +100,6 @@ function updateFavoritesUI() {
         return;
     }
     
-
     favoriteCards.forEach(card => {
         const name = card.getAttribute('data-name');
         const x = card.getAttribute('data-x');
@@ -123,7 +119,7 @@ function updateFavoritesUI() {
 
 window.onload = () => {
     document.querySelectorAll('audio').forEach(a => a.volume = 0);
-    targetX = currentX = -6000 + (window.innerWidth / 2); // Départ position Maroc
+    targetX = currentX = -6000 + (window.innerWidth / 2);
     targetY = currentY = -2000 + (window.innerHeight / 2);
     animate();
 };
